@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"author": "a robot",
+	"homepage_url": "http://fucking.hatelabo.jp",
+	"name": "はてラボ人間性センター解答くん",
+	"description": "はてラボ人間性センターとかいう糞くだらないクイズにロボットが自動で解答し，人間性を証明します．",
+	"version": "1.1.0.0",
+	"icons": {
+		"32": "icon_32.png",
+		"128": "icon_128.png"
+	},
+	"content_scripts": [{
+		"matches": ["http://human.hatelabo.jp/*","https://human.hatelabo.jp/*"],
+		"js": ["script.js","jquery-3.6.0.min.js"]
+	}],
+	"browser_action": {
+		"default_icon": "icon_32.png",
+		"default_title": "はてラボ人間性センターに解答"
+	},
+	"permissions": [
+		"activeTab"
+	]
+}
